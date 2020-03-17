@@ -22,7 +22,7 @@ but the hover effect does not go away until something else is touched
 * at least one of the '.focus' and '.active' classes must be defined
 
 ## Demo
-A live demo is available at [terrymorse.com](https://terrymorse.com).
+A live demo is available at [terrymorse.com](https://terrymorse.com/coding/sticky-hover/index.html).
 ## Installation
 ```shell script
   npm install sticky-hover-fix
