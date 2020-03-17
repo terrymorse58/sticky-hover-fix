@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Fix sticky hover buttons on touch devices",
   "main": "sthoverfix.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terrymorse58/sticky-hover-fix.git"
+  },
   "directories": {
     "test": "test"
   },
