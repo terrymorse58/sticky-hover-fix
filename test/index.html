@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, maximum-scale=1, minimum-scale=1, shrink-to-fit=no, user-scalable=no">
+
+  <title>Sticky Hover Botton Fix</title>
+
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/terrymorse58/bootsdark/dist/bootsdark.css"
+        crossorigin="anonymous">
+
+  <style>
+    .div-results {
+      border: 1px solid gray;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://terrymorse.com">Terry Morse
+      Software</a>
+  </nav>
+</header>
+
+
+<div class="container mt-2 mb-5" style="max-width:60rem">
+
+  <h1>Sticky Hover Button Fix for Touch Devices</h1>
+  <h5>Eliminating an annoying user experience.</h5>
+
+  <hr>
+
+  <h5>The Problem on Touch Devices</h5>
+
+  <ul>
+    <li>button hover effect remains ("sticks") when pressed</li>
+    <li>buttons don't provide a visual response while they are being
+      pressed</li>
+  </ul>
+
+  <h5><a id="sbtns"></a>Sample Buttons</h5>
+
+  <p>
+    <button type="button" class="btn btn-primary my-2 mr-2">
+      Primary Button</button>
+    <button type="button" class="btn btn-secondary my-2 mr-2">
+      Secondary Button</button>
+    <button type="button" class="btn btn-success my-2 mr-2">
+      Success Button</button>
+    <button type="button" class="btn btn-info my-2 mr-2">
+      Info Button</button>
+    <button type="button" class="btn btn-warning my-2 mr-2">
+      Warning Button</button>
+    <button type="button" class="btn btn-danger my-2 mr-2">
+      Danger Button</button>
+    <button type="button" class="btn btn-link my-2 mr-2">
+      Link Style Button</button>
+  </p>
+
+  <p>
+    <button type="button" class="btn btn-outline-primary my-2 mr-2">
+      Primary Button</button>
+    <button type="button" class="btn btn-outline-secondary my-2 mr-2">
+      Secondary Button</button>
+    <button type="button" class="btn btn-outline-success my-2 mr-2">
+      Success Button</button>
+    <button type="button" class="btn btn-outline-info my-2 mr-2">
+      Info Button</button>
+    <button type="button" class="btn btn-outline-warning my-2 mr-2">
+      Warning Button</button>
+    <button type="button" class="btn btn-outline-danger my-2 mr-2">
+      Danger Button</button>
+    </button>
+  </p>
+
+  <h4>Fix All Buttons</h4>
+
+  <p>Fix up all buttons on a page — but only if this is a touch-capable
+    device.</p>
+
+  <button type="button" class="btn btn-primary my-2" name="autofix"
+          onclick="autofix();">
+    Fix All Buttons
+  </button>
+
+  <div id="div-autofix" class="div-results my-4 p-2">
+    Click or press <strong>Fix All Buttons</strong> above
+  </div>
+
+  <hr>
+
+  <h2>Manual Changes</h2>
+
+  <h4>De-Stickify Buttons</h4>
+
+  <p>When a button is pressed on a touch device, the button "hover" effect
+    remains ("sticks" to the button) until something else on the page is
+    touched.</p>
+  <p>This fix dynamically
+    eliminates all CSS rules containing both '.btn' and ':hover'.</p>
+  <p>Click below to eliminate these button hover rules:</p>
+
+  <button id="btn-nohover" type="button" class="btn btn-primary mr-3 my-2"
+          onclick="deleteAllBtnHoverRules();">
+    De-Stickify Buttons
+  </button>
+
+  <div id="div-nohover" class="div-results my-4 p-2">
+    Click or press <strong>De-Stickify Buttons</strong> above
+  </div>
+
+  <h4>Animate Button Press</h4>
+
+  <p>Once the sticky hover effect is removed, a button will no longer change
+    visually when it is pressed.</p>
+  <p>This fix adds the 'focus' and 'active' classes to a button when it
+    is pressed, then removes those
+    classes when the finger is lifted.</p>
+  <p>Click below to activate anminated press for all buttons:</p>
+
+  <button type="button" class="btn btn-primary my-2" name="animatepress"
+          onclick="addPress();">
+    Add Animated Press
+  </button>
+
+  <div id="div-press" class="div-results my-4 p-2">
+    Click or press <strong>Add Animated Press</strong> above
+  </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"></script>
+<script src="../sthoverfix.js"></script>
+<script>
+
+  // monitor button events
+  function addPress () {
+    const result = document.getElementById('div-press');
+    result.innerHTML = "Working…";
+    const addTotal = StHoverFix.addPressAnimation();
+    setTimeout(() => {
+      result.innerHTML =
+        ` Added animation to ${addTotal} buttons.<br/>` +
+        'Touch the <a href="#sbtns">Sample Buttons</a>' +
+        ' above on a touch-capable device to see the effect.';
+    }, 500);
+  }
+
+  // find and delete all CSS rules with '.btn :hover'
+  function deleteAllBtnHoverRules () {
+    const result = document.getElementById('div-nohover');
+    result.innerHTML = 'Working…';
+    const removedCount = StHoverFix.removeBtnHovers();
+    setTimeout(() => {
+      result.innerHTML =
+        `Complete, removed ${removedCount} CSS rules.<br/> ` +
+        `Hover over or touch <a href="#sbtns">Sample Buttons</a> above ` +
+        `to see the effect.`;
+    }, 500);
+  }
+
+  // automatically fix all buttons
+  function autofix () {
+    const result = document.getElementById('div-autofix');
+    result.innerHTML = 'Fixing buttons if this is a touch device…';
+    StHoverFix.fixIfTouchDevice((fixed) => {
+      setTimeout(() => {
+        console.log('autofix fixed:', fixed);
+        result.innerHTML = (fixed) ?
+          'This is a touch device.<br/>' +
+          'Hover effects have been removed, and press animation ' +
+          'has been added to all buttons.<br/>' +
+          'See <a href="#sbtns">Sample Buttons</a>, above.' :
+          'This is not a touch-capable device, no changes made.';
+      }, 1000);
+    });
+  }
+
+</script>
+
+</body>
+</html>
