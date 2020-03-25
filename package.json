@@ -1,6 +1,6 @@
 {
   "name": "sticky-hover-fix",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fix sticky hover buttons on touch devices",
   "main": "sthoverfix.js",
   "repository": {

@@ -34,6 +34,22 @@ A live demo is available at [terrymorse.com](https://terrymorse.com/coding/stick
     StHoverFix.fixIfTouchDevice();
 </script>
 ```
+---
+## Functions
+
+### `fixIfTouchDevice()`
+Fix sticky hover button if this is a touch device.
+
+### `hasTouch()`
+Returns true if the browser has a touch device.
+
+### `removeButtonHovers()`
+Remove all button hover CSS rules from all style sheets.
+
+### `addPressAnimation()`
+Add press animation to all existing buttons. Adds *focus* and *active
+* classes to button upon *touchstart*, removes then upon *touchend*.
+
 ## License
 
 MIT License
